@@ -1,5 +1,5 @@
 class BlabsController < ApplicationController
-  before_action :authenticate_request, only: [:create]
+  # before_action :authenticate_request, only: [:create]
 
   def index
     @blabs = Blab.all.order(created_at: :desc)

@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20150905182050) do
 
   create_table "reps", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "reps",       null: false
-    t.string   "weight",     null: false
+    t.string   "reps"
+    t.string   "weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

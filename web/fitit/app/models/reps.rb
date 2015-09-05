@@ -1,4 +1,4 @@
-class Reps < ActiveRecord::Base
+class repBased < ActiveRecord::Base
   belongs_to :user
-  validates_presence_of :reps , :weight
+  validates_presence_of :reps
 end
