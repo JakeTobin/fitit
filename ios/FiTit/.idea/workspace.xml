@@ -87,6 +87,7 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/index.ios.js" />
+        <option value="$PROJECT_DIR$/rep/rep.js" />
       </list>
     </option>
   </component>
