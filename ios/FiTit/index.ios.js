@@ -13,30 +13,36 @@ var {
   View,
 } = React;
 
-
 var FiTit = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
+
+        // Welcome Text
         <Text style={styles.welcome}>
           Welcome to FITit!
         </Text>
         <Text style={styles.instructions}>
           Choose your workout type:
         </Text>
-          <Button style={styles.buttons} onPress={this._handleLoadPress}>
-              Load Workout
-          </Button>
-          <Button style={styles.buttons} onPress={this._handleRepPress}>
-              Rep Workout
-          </Button>
-          <Button style={styles.buttons} onPress={this._handleTimedPress}>
-              Timed Workout
-          </Button>
+
+        // Homepage Buttons
+        <Button style={styles.buttons} onPress={this._handleLoadPress}>
+            Load Workout
+        </Button>
+        <Button style={styles.buttons} onPress={this._handleRepPress}>
+            Rep Workout
+        </Button>
+        <Button style={styles.buttons} onPress={this._handleTimedPress}>
+            Timed Workout
+        </Button>
 
       </View>
     );
   },
+
+    // Button Handling Functions
+    // TODO send to appropriate view controller
     _handleLoadPress(event) {
         console.log('Load Pressed!');
     },
