@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817211121) do
+ActiveRecord::Schema.define(version: 20150905182050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 20150817211121) do
   end
 
   add_index "oauths", ["token"], name: "index_oauths_on_token", using: :btree
+
+  create_table "reps", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "reps",       null: false
+    t.string   "weight",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reps", ["user_id"], name: "index_reps_on_user_id", using: :btree
+
+  create_table "times", force: :cascade do |t|
+    t.integer "user_id"
+    t.string  "time",    null: false
+  end
+
+  add_index "times", ["user_id"], name: "index_times_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "uid",        null: false
