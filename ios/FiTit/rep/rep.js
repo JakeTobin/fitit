@@ -16,8 +16,11 @@ var {
     } = React;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 var Placehold = ["Testing","Testing More","Testing Most"]
 var Index = 0
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 
