@@ -3,6 +3,7 @@
 var React = require('react-native');
 var Button = require('react-native-button');
 var RepScene = require('./rep/rep.js');
+var TimeScene = require('./time/time.js');
 
 var {
   AppRegistry,
@@ -31,20 +32,22 @@ var HomeScene = React.createClass({
       <View style={styles.container}>
 
         <Text style={styles.welcome}>
-          Welcome to FITit!
+          Welcome to
+          <Text style={{fontWeight:'bold',color:'blue'}}> FIT</Text>
+          it!
         </Text>
         <Text style={styles.instructions}>
-          Choose your workout type:
+          Time to get moving, pick a plan:
         </Text>
 
         <Button style={styles.buttons} onPress={this.onLoadPress}>
-            Load Workout
+            Load Plan
         </Button>
         <Button style={styles.buttons} onPress={this.onRepPress}>
-            Rep Workout
+            Rep Based
         </Button>
-        <Button style={styles.buttons} onPress={this._onTimePress}>
-            Timed Workout
+        <Button style={styles.buttons} onPress={this.onTimePress}>
+            Timed Based
         </Button>
 
       </View>
@@ -60,7 +63,6 @@ var HomeScene = React.createClass({
     },
     onRepPress() {
         this.props.navigator.push({
-            title: 'Reps',
             component: RepScene
         });
     },
@@ -116,7 +118,7 @@ var styles = StyleSheet.create({
     },
 
     welcome: {
-      fontSize: 20,
+      fontSize: 25,
       textAlign: 'center',
       margin: 10,
     },
