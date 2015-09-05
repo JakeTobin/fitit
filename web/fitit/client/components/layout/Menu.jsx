@@ -45,14 +45,12 @@ module.exports = React.createClass({
     return (
       <div id="menu">
         <span id="menu-link" onClick={this.props.sendMenuClick}><span></span></span>
-        <div id="menu-list">
-          <div className="pure-menu pure-menu-open">
-            <span className="pure-menu-heading">FiTit</span>
-            <ul>
+          <AppBar
+            title="FiTit"
+            iconClassNameRight="muidocs-icon-navigation-expand-more" />
 
-            </ul>
-          </div>
-        </div>
+
+
       </div>
     );
   }
