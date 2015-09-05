@@ -1,7 +1,7 @@
 {
-  "name": "Blabber",
+  "name": "FiTit",
   "version": "0.0.1",
-  "description": "an app for blabbing",
+  "description": "A Pennapps hackathon",
   "main": "client/main.jsx",
   "repository": {
     "type": "git",
