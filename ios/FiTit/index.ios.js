@@ -77,13 +77,6 @@ var HomeScene = React.createClass({
         });
     }
 
-         /*
-          <View style={[styles.scene, {backgroundColor: '#DAF6FF'}]}>
-              <TouchableHighlight onPress={this.onPress}>
-                  <Text>Welcome to the NavigatorIOS Demo. Press here!</Text>
-              </TouchableHighlight>
-          </View>
-          */
 });
 
 var Navigator = React.createClass({
@@ -98,9 +91,11 @@ var Navigator = React.createClass({
         return (
             <NavigatorIOS ref="nav" style={styles.navBarContainer} initialRoute={{
                 component: HomeScene,
+                /*
                 title: '',
                 rightButtonTitle: 'Next',
                 onRightButtonPress: this.onRightButtonPress
+                */
             }} />
         )
     }
