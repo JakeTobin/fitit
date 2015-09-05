@@ -1,0 +1,39 @@
+{
+  "name": "Blabber",
+  "version": "0.0.1",
+  "description": "an app for blabbing",
+  "main": "client/main.jsx",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "devserve": "webpack-dev-server -d --config webpack.dev.config.js --content-base public/ --progress --colors",
+    "devbuild": "webpack -d --config webpack.dev.config.js --profile --progress --colors"
+  },
+  "author": "Jake Tobin",
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "css-loader": "^0.16.0",
+    "griddle-react": "0.2.x",
+    "jsuri": "*",
+    "jsx-loader": "^0.13.2",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "react-select": "^0.6.6",
+    "reqwest": "^1.1.5",
+    "style-loader": "^0.12.3",
+    "underscore": "^1.8.3",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.22",
+    "babel-loader": "^5.3.2",
+    "json-loader": "^0.5.2",
+    "jsx-loader": "^0.13.2"
+  }
+}
