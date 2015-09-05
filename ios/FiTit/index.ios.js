@@ -17,8 +17,6 @@ var FiTit = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-
-        // Welcome Text
         <Text style={styles.welcome}>
           Welcome to FITit!
         </Text>
@@ -26,7 +24,6 @@ var FiTit = React.createClass({
           Choose your workout type:
         </Text>
 
-        // Homepage Buttons
         <Button style={styles.buttons} onPress={this._handleLoadPress}>
             Load Workout
         </Button>
@@ -53,7 +50,6 @@ var FiTit = React.createClass({
         console.log('Timed Pressed!');
     }
 });
-
 
 
 var styles = StyleSheet.create({
