@@ -2,6 +2,8 @@
 
 var React = require('react-native');
 var Button = require('react-native-button');
+var RepScene = require('./rep/rep.js');
+
 var {
   AppRegistry,
   StyleSheet,
@@ -51,7 +53,7 @@ var HomeScene = React.createClass({
         <Button style={styles.buttons} onPress={this.onLoadPress}>
             Load Workout
         </Button>
-        <Button style={styles.buttons} onPress={this._handleRepPress}>
+        <Button style={styles.buttons} onPress={this.onRepPress}>
             Rep Workout
         </Button>
         <Button style={styles.buttons} onPress={this._handleTimedPress}>
@@ -67,6 +69,12 @@ var HomeScene = React.createClass({
         title: 'LOAD SCENE',
         component: ForLoadScene
       });
+    },
+    onRepPress() {
+        this.props.navigator.push({
+            title: 'Reps',
+            component: RepScene
+        });
     }
 
          /*
