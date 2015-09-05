@@ -24,14 +24,27 @@ var FiTit = React.createClass({
         <Text style={styles.instructions}>
           Choose your workout type:
         </Text>
-          <Button style={{color: 'blue'}} onPress={this._handlePress}>
-              Press Me!
+          <Button style={styles.buttons} onPress={this._handleLoadPress}>
+              Load Workout
           </Button>
+          <Button style={styles.buttons} onPress={this._handleRepPress}>
+              Rep Workout
+          </Button>
+          <Button style={styles.buttons} onPress={this._handleTimedPress}>
+              Timed Workout
+          </Button>
+
       </View>
     );
   },
-    _handlePress(event) {
-        console.log('Pressed!');
+    _handleLoadPress(event) {
+        console.log('Load Pressed!');
+    },
+    _handleRepPress(event) {
+        console.log('Rep Pressed!');
+    },
+    _handleTimedPress(event) {
+        console.log('Timed Pressed!');
     }
 });
 
@@ -52,7 +65,11 @@ var styles = StyleSheet.create({
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
+    marginBottom: 30,
+  },
+  buttons: {
+    color: 'black',
+    marginBottom: 10,
   },
 });
 
