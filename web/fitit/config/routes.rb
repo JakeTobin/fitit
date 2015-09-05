@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   get 'request_token', to: 'tokens#request_token'
   get 'access_token', to: 'tokens#access_token'
 
-  resources :blabs, only: [:index, :create, :show]
+  # namespace :api, :path => "", :constraints => {:subdomain => "api"} do
+  #   namespace :v1 do
+      resources :blabs, only: [:index, :create, :show]
+      resources :reps, only: [:index, :create, :show]
+      resources :times, only: [:index, :create, :show]
+    # end
+  # end
+
   match '*all', to: 'application#index', via: [:get]
 end
