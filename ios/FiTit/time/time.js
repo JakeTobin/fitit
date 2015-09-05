@@ -16,7 +16,7 @@ var {
 var TimeScene = React.createClass({
   render() {
       return (
-          <View style={[styles.container, {backgroundColor: '#ECF6E8'}]}>
+          <View style={[styles.container, {backgroundColor: '#FFFFFF'}]}>
               <Text style={{marginBottom:20}}>Squats</Text>
               <TextInput
                 style={[styles.textBoxes]}
@@ -47,6 +47,18 @@ var TimeScene = React.createClass({
               </Button>
           </View>
       );
+      onNextPress() {
+          if (Index < Placehold.length-1) {
+            Index += 1
+            this.props.navigator.push({
+                component: RepScene
+              });
+          }
+          else {
+            Index = 0;
+            this.props.navigator.popToTop();
+          }
+        },
   }
 });
 

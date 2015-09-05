@@ -24,6 +24,8 @@ var ForNextScene = React.createClass({
     }
 });
 
+
+
 var HomeScene = React.createClass({
 
   render() {
@@ -47,7 +49,7 @@ var HomeScene = React.createClass({
             Rep Based
         </Button>
         <Button style={styles.buttons} onPress={this.onTimePress}>
-            Timed Based
+            Time Based
         </Button>
 
       </View>
@@ -83,12 +85,19 @@ var Navigator = React.createClass({
         })
     },
 
+    _handleBackButtonPress: function() {
+        this.props.navigator.pop();
+    },
+
     render () {
         return (
-            <NavigatorIOS ref="nav" style={styles.navBarContainer} initialRoute={{
+            <NavigatorIOS ref="nav" style={styles.navBarContainer}
+                initialRoute={{
                 component: HomeScene,
+                navigationBarHidden: 'true',
+                shadowHidden: 'true',
+                barTintColor: 'white'
                 /*
-                title: '',
                 rightButtonTitle: 'Next',
                 onRightButtonPress: this.onRightButtonPress
                 */
@@ -108,7 +117,7 @@ var styles = StyleSheet.create({
     },
 
     navBarContainer: {
-      flex: 1,
+      flex: 1
     },
 
     container: {

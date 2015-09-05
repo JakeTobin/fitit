@@ -2,6 +2,7 @@
 
 var React = require('react-native');
 var Button = require('react-native-button');
+var HomeScene = require('../index.ios.js');
 
 
 var {
@@ -11,17 +12,24 @@ var {
     Text,
     View,
     TouchableHighlight,
-    TextInput
+    TextInput,
     } = React;
+
+<<<<<<< HEAD
+var Placehold = ["Testing","Testing More","Testing Most"]
+var Index = 0
+=======
+>>>>>>> origin/master
 
 var RepScene = React.createClass({
     render() {
         return (
-            <View style={[styles.container, {backgroundColor: '#ECF6E8'}]}>
-                <Text style={{marginBottom:20}}>Squats</Text>
+            <View style={[styles.container, {backgroundColor: '#FFFFFF'}]}>
+                <Text style={{marginBottom:20,fontSize: 20}}>
+                Squats {Index+1}/{Placehold.length}</Text>
                 <TextInput
                   style={[styles.textBoxes]}
-                  placeholder="Previous Weight"
+                  placeholder={Placehold[Index]}
                   keyboardType='numeric'
                   textAlign='center'
                   /*
@@ -41,8 +49,21 @@ var RepScene = React.createClass({
                     Next
                 </Button>
             </View>
-        );
-    }
+          );
+        },
+            onNextPress() {
+                if (Index < Placehold.length-1) {
+                  Index += 1
+                  this.props.navigator.push({
+                      component: RepScene
+                    });
+                }
+                else {
+                  Index = 0;
+                  this.props.navigator.popToTop();
+                }
+              },
+
 });
 
 var styles = StyleSheet.create({
@@ -64,4 +85,4 @@ var styles = StyleSheet.create({
 
 
 
-module.exports = RepScene;
+module.exports = RepScene, HomeScene;
