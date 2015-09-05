@@ -5,12 +5,14 @@
 'use strict';
 
 var React = require('react-native');
+var Button = require('react-native-button');
 var {
   AppRegistry,
   StyleSheet,
   Text,
   View,
 } = React;
+
 
 var FiTit = React.createClass({
   render: function() {
@@ -22,10 +24,18 @@ var FiTit = React.createClass({
         <Text style={styles.instructions}>
           Choose your workout type:
         </Text>
+          <Button style={{color: 'blue'}} onPress={this._handlePress}>
+              Press Me!
+          </Button>
       </View>
     );
-  }
+  },
+    _handlePress(event) {
+        console.log('Pressed!');
+    }
 });
+
+
 
 var styles = StyleSheet.create({
   container: {
