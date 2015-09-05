@@ -11,6 +11,7 @@ var {
   StyleSheet,
   Text,
   View,
+    TouchableHighlight,
 } = React;
 
 var FiTit = React.createClass({
