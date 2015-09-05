@@ -13,7 +13,6 @@ var {
   TouchableHighlight
 } = React;
 
-
 var ForNextScene = React.createClass({
     render() {
         return (
@@ -23,18 +22,6 @@ var ForNextScene = React.createClass({
         );
     }
 });
-
-
-var ForLoadScene = React.createClass({
-  render() {
-    return (
-      <View style={[styles.scene, {backgroundColor: '#ECF6E8'}]}>
-        <Text>WELCOME TO THE LOAD PAGE!</Text>
-      </View>
-    );
-  }
-});
-
 
 var HomeScene = React.createClass({
 
@@ -56,7 +43,7 @@ var HomeScene = React.createClass({
         <Button style={styles.buttons} onPress={this.onRepPress}>
             Rep Workout
         </Button>
-        <Button style={styles.buttons} onPress={this._handleTimedPress}>
+        <Button style={styles.buttons} onPress={this._onTimePress}>
             Timed Workout
         </Button>
 
@@ -64,6 +51,7 @@ var HomeScene = React.createClass({
       );
     },
 
+    // TODO: Read JSON and route to Rep or Time
     onLoadPress() {
       this.props.navigator.push({
         title: 'LOAD SCENE',
@@ -74,6 +62,12 @@ var HomeScene = React.createClass({
         this.props.navigator.push({
             title: 'Reps',
             component: RepScene
+        });
+    },
+    onTimePress() {
+        this.props.navigator.push({
+            title: 'Time',
+            component: TimeScene
         });
     }
 
