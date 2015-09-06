@@ -12,6 +12,7 @@ var {
     View,
     TouchableHighlight,
     TextInput,
+    Image
     } = React;
 
 var Placehold = ["Testing","Testing More","Testing Most"]
@@ -20,7 +21,9 @@ var Index = 0
 var RepScene = React.createClass({
     render() {
         return (
-            <View style={[styles.container, {backgroundColor: '#FFFFFF'}]}>
+            <View style={[styles.container, {backgroundColor: 'transparent'}]}>
+            <Image source={require('../iOS/FiTit/assets/side_image.jpg')}
+            style={styles.backgroundImage}>
                 <Text style={{marginBottom:20,fontSize: 20}}>
                 Squats <Text style={{color:'gray'}}>{Index+1}/{Placehold.length}
                 </Text></Text>
@@ -45,6 +48,7 @@ var RepScene = React.createClass({
                 <Button style={styles.buttons} onPress={this.onNextPress}>
                     Next
                 </Button>
+                </Image>
             </View>
           );
         },
@@ -66,7 +70,6 @@ var RepScene = React.createClass({
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 75,
         alignItems: 'center'
     },
 
@@ -77,7 +80,14 @@ var styles = StyleSheet.create({
       alignSelf:'center',
       width: 200,
       marginBottom: 20
-    }
+    },
+
+    backgroundImage: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: 1,
+      resizeMode: Image.resizeMode.contain
+    },
 });
 
 

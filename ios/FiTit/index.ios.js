@@ -111,8 +111,6 @@ var Navigator = React.createClass({
 var styles = StyleSheet.create({
 
   scene: {
-    padding: 10,
-    paddingTop: 74,
     flex: 1
     },
 
