@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # namespace :api, :path => "", :constraints => {:subdomain => "api"} do
   #   namespace :v1 do
       resources :blabs, only: [:index, :create, :show]
-      resources :reps, only: [:index, :create, :show]
+      resources :resistances, only: [:index, :create, :show]
       resources :times, only: [:index, :create, :show]
     # end
   # end
