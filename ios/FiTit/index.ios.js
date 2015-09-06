@@ -11,7 +11,8 @@ var {
   Text,
   View,
   NavigatorIOS,
-  TouchableHighlight
+  TouchableHighlight,
+  Image
 } = React;
 
 var ForNextScene = React.createClass({
@@ -30,12 +31,12 @@ var HomeScene = React.createClass({
 
   render() {
     return (
-
-      <View style={styles.container}>
-
+      <View style={[styles.container]}>
+      <Image source={require('./iOS/FiTit/assets/home_image.jpg')}
+        style={styles.backgroundImage}>
         <Text style={styles.welcome}>
           Welcome to
-          <Text style={{fontWeight:'bold',color:'blue'}}> FIT</Text>
+          <Text style={{fontWeight:'bold',color:'orange'}}> FIT</Text>
           it!
         </Text>
         <Text style={styles.instructions}>
@@ -51,16 +52,15 @@ var HomeScene = React.createClass({
         <Button style={styles.buttons} onPress={this.onTimePress}>
             Time Based
         </Button>
-
+      </Image>
       </View>
       );
     },
 
     // TODO: Read JSON and route to Rep or Time
     onLoadPress() {
-      this.props.navigator.push({
-        title: 'LOAD SCENE',
-        component: ForLoadScene
+        this.props.navigator.push({
+        component: RepScene
       });
     },
     onRepPress() {
@@ -70,7 +70,6 @@ var HomeScene = React.createClass({
     },
     onTimePress() {
         this.props.navigator.push({
-            title: 'Time',
             component: TimeScene
         });
     }
@@ -91,17 +90,18 @@ var Navigator = React.createClass({
 
     render () {
         return (
-            <NavigatorIOS ref="nav" style={styles.navBarContainer}
+            <NavigatorIOS
+            style={styles.navBarContainer}
                 initialRoute={{
                 component: HomeScene,
-                navigationBarHidden: 'true',
-                shadowHidden: 'true',
-                barTintColor: 'white'
                 /*
-                rightButtonTitle: 'Next',
                 onRightButtonPress: this.onRightButtonPress
                 */
-            }} />
+            }}
+            //navigationBarHidden: 'true',
+            //shadowHidden: 'true',
+            //barTintColor: 'white'
+            />
         )
     }
 });
@@ -117,13 +117,15 @@ var styles = StyleSheet.create({
     },
 
     navBarContainer: {
-      flex: 1
+      flex: 1,
+      color: 'transparent'
     },
 
     container: {
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      backgroundColor: 'transparent'
     },
 
     welcome: {
@@ -141,6 +143,13 @@ var styles = StyleSheet.create({
     buttons: {
       color: 'black',
       marginBottom: 10,
+    },
+
+    backgroundImage: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: 1,
+      resizeMode: Image.resizeMode.contain
     },
 });
 

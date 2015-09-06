@@ -4,7 +4,6 @@ var React = require('react-native');
 var Button = require('react-native-button');
 var HomeScene = require('../index.ios.js');
 
-
 var {
     StyleSheet,
     NavigatorIOS,
@@ -15,21 +14,16 @@ var {
     TextInput,
     } = React;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 var Placehold = ["Testing","Testing More","Testing Most"]
 var Index = 0
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
 var RepScene = React.createClass({
     render() {
         return (
             <View style={[styles.container, {backgroundColor: '#FFFFFF'}]}>
                 <Text style={{marginBottom:20,fontSize: 20}}>
-                Squats {Index+1}/{Placehold.length}</Text>
+                Squats <Text style={{color:'gray'}}>{Index+1}/{Placehold.length}
+                </Text></Text>
                 <TextInput
                   style={[styles.textBoxes]}
                   placeholder={Placehold[Index]}
@@ -54,18 +48,18 @@ var RepScene = React.createClass({
             </View>
           );
         },
-            onNextPress() {
-                if (Index < Placehold.length-1) {
-                  Index += 1
-                  this.props.navigator.push({
-                      component: RepScene
-                    });
-                }
-                else {
-                  Index = 0;
-                  this.props.navigator.popToTop();
-                }
-              },
+        onNextPress() {
+            if (Index < Placehold.length-1) {
+              Index += 1
+              this.props.navigator.push({
+                  component: RepScene
+                });
+            }
+            else {
+              Index = 0;
+              this.props.navigator.popToTop();
+            }
+          },
 
 });
 
