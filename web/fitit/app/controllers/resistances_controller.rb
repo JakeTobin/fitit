@@ -6,7 +6,7 @@ class ResistancesController < ApplicationController
   end
 
   def create
-    @resistance = Resistance.new(rep_params)
+    @resistance = Resistance.new(@resistance.to_param.as_json)
     if @resistance.save
       render json: @resistance, include: {  }, only: [:id, :reps, :weight], status: :created, location: resistances_url(@resistances, format: :json)
     else
