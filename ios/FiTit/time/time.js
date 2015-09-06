@@ -11,7 +11,8 @@ var {
     Text,
     View,
     TextInput,
-    TouchableHighlight
+    TouchableHighlight,
+    Image
     } = React;
 
 var Placehold = ["Testing","Testing More","Testing Most"]
@@ -20,41 +21,31 @@ var Index = 0
 var TimeScene = React.createClass({
   render() {
       return (
-          <View style={[styles.container, {backgroundColor: '#FFFFFF'}]}>
-              <Text style={{marginBottom:20,fontSize: 20}}>
-              Squats <Text style={{color:'gray'}}>{Index+1}/{Placehold.length}
-              </Text></Text>
+          <View style={[styles.container, {backgroundColor: 'transparent'}]}>
+              <Image source={require('../iOS/FiTit/assets/side_image.jpg')}
+              style={styles.backgroundImage}>
+              <Text style={{color:'gray',marginBottom:10}}
+              >{Index+1}/{Placehold.length}</Text>
               <TextInput
                 style={[styles.textBoxes]}
-                value="Previous Time"
-                editable='false'
+                placeholder="Exercise"
                 textAlign='center'
-                /*
-                onChangeText={(text) => this.setState({text})}
-                value={this.state.text}*/
+                autoCorrect='false'
               />
               <TextInput
                 style={[styles.textBoxes]}
-                placeholder="Current Time"
+                placeholder="Time"
                 keyboardType='numeric'
                 textAlign='center'
-                /*
-                onChangeText={(text) => this.setState({text})}
-                value={this.state.text}*/
               />
-              <Button style={styles.buttons} onPress={this.onStartPress}>
-                  Start
+              <Button style={styles.buttons} onPress={this.onNextPress}>
+                  Next
               </Button>
-              <Button style={styles.buttons} onPress={this.onClearPress}>
-                  Clear
-              </Button>
-              <Button style={styles.buttons} onPress={this.onDonePress}>
-                  Done
-              </Button>
+              </Image>
           </View>
         );
       },
-        onDonePress() {
+        onNextPress() {
             if (Index < Placehold.length-1) {
               Index += 1
               this.props.navigator.push({
@@ -71,7 +62,6 @@ var TimeScene = React.createClass({
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 75,
         alignItems: 'center'
     },
 
@@ -82,7 +72,19 @@ var styles = StyleSheet.create({
       alignSelf:'center',
       width: 200,
       marginBottom: 20
-    }
+    },
+
+    backgroundImage: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: 1,
+      resizeMode: Image.resizeMode.contain
+    },
+    buttons: {
+      color: 'black',
+      margin: 0,
+      fontWeight: '100',
+    },
 });
 
-module.exports = TimeScene;
+module.exports = TimeScene, HomeScene;

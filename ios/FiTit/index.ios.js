@@ -47,10 +47,10 @@ var HomeScene = React.createClass({
             Load Plan
         </Button>
         <Button style={styles.buttons} onPress={this.onRepPress}>
-            Rep Based
+            Rep Plan
         </Button>
         <Button style={styles.buttons} onPress={this.onTimePress}>
-            Time Based
+            Time Plan
         </Button>
       </Image>
       </View>
@@ -77,30 +77,13 @@ var HomeScene = React.createClass({
 });
 
 var Navigator = React.createClass({
-    onRightButtonPress: function() {
-        this.refs.nav.push({
-            title: 'From Next',
-            component: ForNextScene
-        })
-    },
-
-    _handleBackButtonPress: function() {
-        this.props.navigator.pop();
-    },
-
     render () {
         return (
-            <NavigatorIOS
-            style={styles.navBarContainer}
+                <NavigatorIOS
+                style={styles.navBarContainer}
                 initialRoute={{
                 component: HomeScene,
-                /*
-                onRightButtonPress: this.onRightButtonPress
-                */
             }}
-            //navigationBarHidden: 'true',
-            //shadowHidden: 'true',
-            //barTintColor: 'white'
             />
         )
     }
@@ -109,14 +92,12 @@ var Navigator = React.createClass({
 
 
 var styles = StyleSheet.create({
-
-  scene: {
-    flex: 1
+    scene: {
+      flex: 1
     },
 
     navBarContainer: {
       flex: 1,
-      color: 'transparent'
     },
 
     container: {
@@ -140,7 +121,8 @@ var styles = StyleSheet.create({
 
     buttons: {
       color: 'black',
-      marginBottom: 10,
+      marginBottom: 25,
+      fontWeight: '100',
     },
 
     backgroundImage: {

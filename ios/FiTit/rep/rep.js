@@ -15,7 +15,7 @@ var {
     Image
     } = React;
 
-var Placehold = ["Testing","Testing More","Testing Most"]
+var Placehold = ["Weight","Testing More","Testing Most"]
 var Index = 0
 
 var RepScene = React.createClass({
@@ -24,26 +24,25 @@ var RepScene = React.createClass({
             <View style={[styles.container, {backgroundColor: 'transparent'}]}>
             <Image source={require('../iOS/FiTit/assets/side_image.jpg')}
             style={styles.backgroundImage}>
-                <Text style={{marginBottom:20,fontSize: 20}}>
-                Squats <Text style={{color:'gray'}}>{Index+1}/{Placehold.length}
-                </Text></Text>
+                <Text style={{color:'gray',marginBottom:10}}
+                >{Index+1}/{Placehold.length}</Text>
+                <TextInput
+                  style={[styles.textBoxes]}
+                  placeholder='Exercise'
+                  textAlign='center'
+                  autoCorrect='false'
+                />
                 <TextInput
                   style={[styles.textBoxes]}
                   placeholder={Placehold[Index]}
                   keyboardType='numeric'
                   textAlign='center'
-                  /*
-                  onChangeText={(text) => this.setState({text})}
-                  value={this.state.text}*/
                 />
                 <TextInput
                   style={[styles.textBoxes]}
                   placeholder="Previous Reps"
                   keyboardType='numeric'
                   textAlign='center'
-                  /*
-                  onChangeText={(text) => this.setState({text})}
-                  value={this.state.text}*/
                 />
                 <Button style={styles.buttons} onPress={this.onNextPress}>
                     Next
@@ -87,6 +86,11 @@ var styles = StyleSheet.create({
       alignItems: 'center',
       flex: 1,
       resizeMode: Image.resizeMode.contain
+    },
+    buttons: {
+      color: 'black',
+      margin: 0,
+      fontWeight: '100',
     },
 });
 
