@@ -3,6 +3,8 @@
 var React = require('react-native');
 var Button = require('react-native-button');
 var HomeScene = require('../index.ios.js');
+var JsonData = require('../data.json');
+
 
 var {
     StyleSheet,
@@ -15,7 +17,6 @@ var {
     Image
     } = React;
 
-var Placehold = ["Weight","Testing More","Testing Most"]
 var Index = 0
 
 var RepScene = React.createClass({
@@ -25,22 +26,22 @@ var RepScene = React.createClass({
             <Image source={require('../iOS/FiTit/assets/side_image.jpg')}
             style={styles.backgroundImage}>
                 <Text style={{color:'gray',marginBottom:10}}
-                >{Index+1}/{Placehold.length}</Text>
+                >{Index+1}/{17}</Text>
                 <TextInput
                   style={[styles.textBoxes]}
-                  placeholder='Exercise'
+                  value={JsonData[Index]['id']}
                   textAlign='center'
                   autoCorrect='false'
                 />
                 <TextInput
                   style={[styles.textBoxes]}
-                  placeholder={Placehold[Index]}
+                  placeholder={JsonData[Index]['weight']}
                   keyboardType='numeric'
                   textAlign='center'
                 />
                 <TextInput
                   style={[styles.textBoxes]}
-                  placeholder="Previous Reps"
+                  placeholder={JsonData[Index]['rep']}
                   keyboardType='numeric'
                   textAlign='center'
                 />
@@ -52,7 +53,7 @@ var RepScene = React.createClass({
           );
         },
         onNextPress() {
-            if (Index < Placehold.length-1) {
+            if (Index < 16) {
               Index += 1
               this.props.navigator.push({
                   component: RepScene

@@ -4,6 +4,7 @@ var React = require('react-native');
 var Button = require('react-native-button');
 var RepScene = require('./rep/rep.js');
 var TimeScene = require('./time/time.js');
+var JsonData = require('./data.json');
 
 var {
   AppRegistry,

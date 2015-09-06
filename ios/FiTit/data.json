@@ -1,0 +1,87 @@
+[
+  {
+    "id": "Squats",
+    "rep": "45",
+    "weight": "20"
+  },
+  {
+    "id": "Curls",
+    "rep": "30",
+    "weight": "15"
+  },
+  {
+    "id": "Push ups",
+    "rep": "15",
+    "weight": "30"
+  },
+  {
+    "id": "Dead lifts",
+    "rep": "120",
+    "weight": "20"
+  },
+  {
+    "id": "Dead Lifts",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Sit Ups",
+    "rep": "45",
+    "weight": "30"
+  },
+  {
+    "id": "Dead Lifts",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Push Ups",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Squats",
+    "rep": "20",
+    "weight": "32"
+  },
+ {
+    "id": "Push Ups",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Chin Ups",
+    "rep": "20",
+    "weight": "20"
+  },
+  {
+    "id": "Dead Lifts",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Bench Press",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Bench Press",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Bench Press",
+    "rep": "20",
+    "weight": "32"
+  },
+  {
+    "id": "Leg Lifts",
+    "rep": "20",
+    "weight": "20"
+  },
+  {
+    "id": "Chin ups",
+    "rep": "20",
+    "weight": "10"
+  }
+]
