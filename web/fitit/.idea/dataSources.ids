@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails fitit: development" uuid="edf0917e-7564-4d40-a33a-858e37b3275f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails fitit: test" uuid="84774a02-8806-4daa-b629-22712693ea85">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails fitit: production" uuid="ca75564d-9f15-4f8f-8229-39e5c6c8a7d5">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
