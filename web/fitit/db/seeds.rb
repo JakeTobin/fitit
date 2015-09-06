@@ -8,4 +8,7 @@
 
 Resistance.create([{rep: '10' , weight: '50'}])
 Resistance.create([{rep: '20' , weight: '50'}])
-Resistance.create([{rep: '30' , weight: '50'}])
+Resistance.create([{rep: '30' , weight: '30'}])
+Resistance.create([{rep: '10' , weight: '60'}])
+Resistance.create([{rep: '20' , weight: '70'}])
+Resistance.create([{rep: '30' , weight: '80'}])

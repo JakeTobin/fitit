@@ -7,11 +7,10 @@ class ResistancesController < ApplicationController
 
   def create
     @resistance = Resistance.new()
-    print 'jake'
+    print 'test'
     if @resistance.save
-      # @current_user = 1
       print 'in if'
-      render json: @resistance, include: { weight: {} }, only: [:id, :reps, :weight], status: :created, location: resistances_url(@resistance, format: :json)
+      render json: @resistance, include: { weight: {} }, only: [:id, :rep, :weight], status: :created, location: resistances_url(@resistance, format: :json)
     else
       print 'in else'
       render json: @resistance.errors, status: :unprocessable_entity
@@ -20,7 +19,7 @@ class ResistancesController < ApplicationController
 
   private
   def resistance_params
-    params.require(:@resistance).permit(:reps ,:weight)
+    params.require(:@resistance).permit(:rep ,:weight)
   end
 
 end
