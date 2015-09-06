@@ -2,10 +2,12 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails fitit: development" uuid="edf0917e-7564-4d40-a33a-858e37b3275f">
-      <first-sync>true</first-sync>
+      <schema-pattern>development_fitit.*</schema-pattern>
+      <default-schemas>development_fitit.*</default-schemas>
     </data-source>
     <data-source name="Rails fitit: test" uuid="84774a02-8806-4daa-b629-22712693ea85">
-      <first-sync>true</first-sync>
+      <schema-pattern>test_fitit.*</schema-pattern>
+      <default-schemas>test_fitit.*</default-schemas>
     </data-source>
     <data-source name="Rails fitit: production" uuid="ca75564d-9f15-4f8f-8229-39e5c6c8a7d5">
       <first-sync>true</first-sync>

@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Resistance.create([{rep: '10' , weight: '50'}])
+Resistance.create([{rep: '20' , weight: '50'}])
+Resistance.create([{rep: '30' , weight: '50'}])
